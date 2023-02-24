@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 100%;
+  height: 500px;
+  border-bottom: 20px solid #4dd920;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /* overflow serve para nao deixar aparecer na tela tudo que sair da delimitação */
+  background: linear-gradient(#87ceeb, #e0f6ff);
+  font-family: "Press Start 2P", cursive;
+}
+
+.goomba {
+  position: absolute;
+  bottom: 0;
+  width: 70px;
+  animation: goomba-animation 1.5s infinite linear;
+}
+
+.mario {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+.clouds {
+  position: absolute;
+  width: 400px;
+  animation: clouds-animation 15s infinite linear;
+}
+
+p {
+  margin: 15px;
+  color: #333;
+}
+
+@keyframes goomba-animation {
+  from {
+    right: -70px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  40% {
+    bottom: 110px;
+  }
+
+  50% {
+    bottom: 110px;
+  }
+
+  60% {
+    bottom: 110px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -400px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
